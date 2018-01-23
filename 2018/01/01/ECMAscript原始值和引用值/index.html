@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  ###存储方式###  原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对">
+<meta name="description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  存储方式 原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。注">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ECMAscript 原始值类型和引用值类型">
 <meta property="og:url" content="https://ziokay.github.io/2018/01/01/ECMAscript原始值和引用值/index.html">
 <meta property="og:site_name" content="被期望-被要求">
-<meta property="og:description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  ###存储方式###  原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对">
+<meta property="og:description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  存储方式 原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。注">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-23T15:35:07.040Z">
+<meta property="og:updated_time" content="2018-01-23T15:44:02.632Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ECMAscript 原始值类型和引用值类型">
-<meta name="twitter:description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  ###存储方式###  原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对">
+<meta name="twitter:description" content="在ECMAscript中可以存放两种类型的值：  原始值：undefined、boolean、number、string 引用值：object（包括function、array等）  存储方式 原始值：存储在栈（stack）中的简单数据段，也就是说，它们的值直接存储在变量访问的位置。 引用值：存储在堆（heap）中的对象，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。注">
 
 
 
@@ -325,29 +325,25 @@
 <li>原始值：undefined、boolean、number、string</li>
 <li>引用值：object（包括function、array等）</li>
 </ul>
-<p>###存储方式###</p>
-<ul>
+<h3 id="存储方式"><a href="#存储方式" class="headerlink" title="存储方式"></a>存储方式</h3><ul>
 <li>原始值：存储在<strong>栈（stack）</strong>中的简单<strong>数据段</strong>，也就是说，它们的值直接存储在变量访问的位置。</li>
 <li>引用值：存储在<strong>堆（heap）</strong>中的<strong>对象</strong>，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。<br>注：这里的堆内存和数据结构的堆是两回事，分配方式类似于链表。</li>
 </ul>
-<p>###操作本质###<br>在任何语言中，值的基本操作都可以归为以下三个方面：</p>
+<h3 id="操作本质"><a href="#操作本质" class="headerlink" title="操作本质"></a>操作本质</h3><p>在任何语言中，值的基本操作都可以归为以下三个方面：</p>
 <ul>
 <li>复制值：把值赋给新变量，或者通过变量把值赋给另一个变量、属性或数组元素。</li>
 <li>传递值：把值作为参数传递给函数或方法。</li>
 <li>比较值：把值与另一个值进行比较。</li>
 </ul>
-<p>####复制值####</p>
-<ul>
+<h4 id="复制值"><a href="#复制值" class="headerlink" title="复制值"></a>复制值</h4><ul>
 <li>原始值：一个变量向另一个新变量复制原始类型值时，会创建这个值的副本，并将这个副本赋给新变量。</li>
 <li>引用值：一个变量向另一个新变量复制引用类型值，复制后新变量保存的是对原值的引用，即复制了指针,实际上两个变量都指向同一对象。</li>
 </ul>
-<p>####传递值####</p>
-<ul>
+<h4 id="传递值"><a href="#传递值" class="headerlink" title="传递值"></a>传递值</h4><ul>
 <li>原始值：当把值传递给函数或方法时，传递的值仅是副本，而不是值本身。例如，如果在函数中修改传递进来的值时，只能够影响这个参数值的副本，并不会影响到原来的值。</li>
 <li>引用值：当使用引用将数据传递给函数时，传递给函数的也是原值的一个引用，函数可以使用这个引用来改变原值。</li>
 </ul>
-<p>####比较值####</p>
-<ul>
+<h4 id="比较值"><a href="#比较值" class="headerlink" title="比较值"></a>比较值</h4><ul>
 <li>原始值：进行逐字节的比较来判断它们是否相等，比较的是值本身，而不是值所处的位置，即使比较结果相等，也只能说明它们所包含的字节信息是相同的。</li>
 <li>引用值：比较的是两个引用的地址，看它们引用的原值是否为同一个副本，而不是比较它们的原值字节是否相等。</li>
 </ul>
@@ -441,8 +437,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -521,6 +526,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#存储方式"><span class="nav-number">1.</span> <span class="nav-text">存储方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#操作本质"><span class="nav-number">2.</span> <span class="nav-text">操作本质</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#复制值"><span class="nav-number">2.1.</span> <span class="nav-text">复制值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#传递值"><span class="nav-number">2.2.</span> <span class="nav-text">传递值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#比较值"><span class="nav-number">2.3.</span> <span class="nav-text">比较值</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
