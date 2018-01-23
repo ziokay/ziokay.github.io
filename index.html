@@ -249,6 +249,125 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ziokay.github.io/2018/01/23/JavaScript闭包/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="被期望-被要求">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="被期望-被要求">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/01/23/JavaScript闭包/" itemprop="url">JavaScript闭包</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-23T23:40:58+08:00">
+                2018-01-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://ziokay.github.io/2018/01/01/ECMAscript原始值和引用值/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -325,28 +444,28 @@
 <li>原始值：undefined、boolean、number、string</li>
 <li>引用值：object（包括function、array等）</li>
 </ul>
-<p>###存储方式</p>
+<p>###存储方式###</p>
 <ul>
 <li>原始值：存储在<strong>栈（stack）</strong>中的简单<strong>数据段</strong>，也就是说，它们的值直接存储在变量访问的位置。</li>
 <li>引用值：存储在<strong>堆（heap）</strong>中的<strong>对象</strong>，也就是说，存储在变量处的值是一个指针（point），指向存储对象的内存处。<br>注：这里的堆内存和数据结构的堆是两回事，分配方式类似于链表。</li>
 </ul>
-<p>###操作本质<br>在任何语言中，值的基本操作都可以归为以下三个方面：</p>
+<p>###操作本质###<br>在任何语言中，值的基本操作都可以归为以下三个方面：</p>
 <ul>
 <li>复制值：把值赋给新变量，或者通过变量把值赋给另一个变量、属性或数组元素。</li>
 <li>传递值：把值作为参数传递给函数或方法。</li>
 <li>比较值：把值与另一个值进行比较。</li>
 </ul>
-<p>####复制值</p>
+<p>####复制值####</p>
 <ul>
 <li>原始值：一个变量向另一个新变量复制原始类型值时，会创建这个值的副本，并将这个副本赋给新变量。</li>
 <li>引用值：一个变量向另一个新变量复制引用类型值，复制后新变量保存的是对原值的引用，即复制了指针,实际上两个变量都指向同一对象。</li>
 </ul>
-<p>####传递值</p>
+<p>####传递值####</p>
 <ul>
 <li>原始值：当把值传递给函数或方法时，传递的值仅是副本，而不是值本身。例如，如果在函数中修改传递进来的值时，只能够影响这个参数值的副本，并不会影响到原来的值。</li>
 <li>引用值：当使用引用将数据传递给函数时，传递给函数的也是原值的一个引用，函数可以使用这个引用来改变原值。</li>
 </ul>
-<p>####比较值</p>
+<p>####比较值####</p>
 <ul>
 <li>原始值：进行逐字节的比较来判断它们是否相等，比较的是值本身，而不是值所处的位置，即使比较结果相等，也只能说明它们所包含的字节信息是相同的。</li>
 <li>引用值：比较的是两个引用的地址，看它们引用的原值是否为同一个副本，而不是比较它们的原值字节是否相等。</li>
@@ -436,7 +555,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
